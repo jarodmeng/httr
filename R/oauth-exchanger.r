@@ -11,8 +11,8 @@
 #' @param request_url the url to provide to the user
 #' @export
 #' @keywords internal
-oauth_exchanger <- function(request_url) {
-  BROWSE(request_url)
+oauth_exchanger <- function(request_url, oob = FALSE) {
+  BROWSE(request_url, oob = oob)
 
   authorization_code <- str_trim(readline("Enter authorization code: "))
   list(code = authorization_code)

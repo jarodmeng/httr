@@ -217,7 +217,7 @@ check_oob <- function(x) {
 
 oauth_authorize <- function(url, oob = FALSE) {
   if (oob) {
-    oauth_exchanger(url)$code
+    oauth_exchanger(url, oob = oob)$code
   } else {
     oauth_listener(url)$code
   }
